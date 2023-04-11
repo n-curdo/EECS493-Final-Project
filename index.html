@@ -1,0 +1,55 @@
+<html>
+
+    <head>
+        <title>Fitness App Homepage</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="homeStyle.css">
+        <!-- ADD LINK TO SCRIPT WHEN NECESSARY -->
+    </head>
+
+    <body>
+        <header>
+            <!--<button id="dropDownMenu" type="button"></button>-->
+            <div class="userInfo">
+                <img id="profilePicture" src="images/blankPFP.png" alt="Profile Picture"> <!-- Possibly have profile functionality?-->
+                <p id="username">Sign In</p>
+            </div>
+            <button id="headerButton">Home</button>
+            <button id="headerButton">Workouts</button>
+            <button id="headerButton">Meals</button>
+        </header>
+        
+        <div class="content">
+            <div class="streak">
+                <p style="text-align: center;">You're On a <br> __ Day Streak! &#128293</p>
+                <div class="streakGrid">
+                    <button id="streakDay" style="background-color: orange"></button>
+                    <button id="streakDay" style="background-color: orange"></button>
+                    <button id="streakDay" style="background-color: orange"></button>
+                    <button id="streakDay"></button>
+                    <button id="streakDay"></button>
+                </div>
+            </div>
+    
+            <div class="workout">
+                <p style="text-align: center;">Choose A Split: </p>
+                <div class="workoutGrid">
+                    <button id="workoutItem">Chest</button>
+                    <button id="workoutItem">Back</button>
+                    <button id="workoutItem">Bicep</button>
+                </div>
+    
+            </div>
+
+        </div>
+    <!--
+        <footer class="footerGrid">
+                <button id="footerButton">Home</button>
+                <button id="footerButton">Workouts</button>
+                <button id="footerButton">Meals</button>
+        </footer>
+    -->
+    </body>
+
+
+</html>

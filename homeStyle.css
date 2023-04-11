@@ -1,0 +1,122 @@
+body{
+    /*background-image: url('images/black_background.png');*/
+    /*background-color: #424242;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+header{
+    /*position: static;*/
+    height: 20%;
+    /*background-color: grey;*/
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+}
+.userInfo{
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    align-items: center;
+    padding-right: 40px;
+}
+#headerButton{
+    height: 50%;
+    font-size: 40px;
+    background-color: rgb(96, 96, 96);
+    margin-left: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+footer{
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    bottom: 0px;
+    background-color: grey;
+}
+/*
+#dropDownMenu{
+    height: 15%; 150px FOR MOBILE
+    border-radius: 25px;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    aspect-ratio: 1/1;
+    background-color: grey;
+    background-image: url('images/settingsIcon.png');
+    background-size: cover;
+} 
+*/
+
+#profilePicture{
+    /*position: fixed;*/
+    height: 75%;
+    background-color: grey;
+    border-radius: 75px;
+    aspect-ratio: 1/1;
+}
+
+#username{
+    /*position: fixed;*/
+    /*left: 250px; /**225px for MOBILE */
+    font-size: 40px;
+    padding-left: 20px;
+    text-align: center;
+    /*top: 30px;
+    /*font-size: 75px; FOR MOBILE*/
+    /*top: -30px;*/
+}
+
+.streak, .workout{
+    height: 25%;
+}
+.streak>p, .workout>p{
+    /*font-size: 75px; FOR MOBILE*/
+    font-size: 25px;
+    /*color: white;*/
+}
+.streakGrid{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-items: center;
+}
+#streakDay{
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    border: 2px solid black;
+}
+
+.workout{
+    padding: 50px 0px 150px 0px;
+}
+.workoutGrid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+}
+#workoutItem{
+    height: 150px;
+    width: 250px;
+    border-radius: 20px;
+    /*font-size: 60px;*/
+    border: 2px solid black;
+    font-size: 25px;
+}
+
+.footerGrid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+}
+#footerButton{
+    background-color: grey;
+    border: 5px solid black;
+    /*width: 100%;
+    height: 100%;*/
+    font-size: 25px;
+}
