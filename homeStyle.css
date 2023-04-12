@@ -30,6 +30,10 @@ header{
     border: 2px solid black;
     border-radius: 15px;
 }
+#headerButton:hover, #headerButton:focus{
+    font-weight: bold;
+    background-color: lightgray;
+}
 
 footer{
     position: fixed;
@@ -38,20 +42,6 @@ footer{
     bottom: 0px;
     background-color: grey;
 }
-/*
-#dropDownMenu{
-    height: 15%; 150px FOR MOBILE
-    border-radius: 25px;
-    position: fixed;
-    top: 50px;
-    left: 50px;
-    aspect-ratio: 1/1;
-    background-color: grey;
-    background-image: url('images/settingsIcon.png');
-    background-size: cover;
-} 
-*/
-
 #profilePicture{
     /*position: fixed;*/
     height: 75%;
@@ -59,24 +49,42 @@ footer{
     border-radius: 75px;
     aspect-ratio: 1/1;
 }
-
+#profilePicture:hover, #profilePicture:focus{
+    height: 80%;
+}
 #username{
     /*position: fixed;*/
     /*left: 250px; /**225px for MOBILE */
     font-size: 40px;
     padding-left: 20px;
     text-align: center;
-    /*top: 30px;
-    /*font-size: 75px; FOR MOBILE*/
-    /*top: -30px;*/
+}
+#username:hover, #username:focus{
+    font-weight: bold;
 }
 
-.streak, .workout{
+.overallStreak{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
     height: 25%;
 }
-.streak>p, .workout>p{
+.calendar{
+    width: 25%;
+    text-align: center;
+    background-color: grey;
+    height: 150%;
+    display: none;
+}
+.streak{
+    width: 100%;
+    /*height: 25%;*/
+}
+.streak>p{
     /*font-size: 75px; FOR MOBILE*/
     font-size: 25px;
+    text-align: center;
     /*color: white;*/
 }
 .streakGrid{
@@ -89,8 +97,74 @@ footer{
     width: 80px;
     border-radius: 40px;
     border: 2px solid black;
+    font-weight: bold;
 }
 
+.statistics{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: stretch;
+    margin-top: 50px;
+}
+.weight{
+    width: 50%;
+    margin-left: 10px;
+    margin-right: 25px;
+    border: 2px solid black;
+    padding: 2px;
+}
+#weightChartTitle, #maxSelection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+.maxes{
+    padding: 2px;
+    border: 2px solid black;
+    width: 50%;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+#benchMax, #squatMax, #deadliftMax{
+    width: 100%;
+}
+#squatMax, #deadliftMax{
+    display: none;
+}
+
+.addWeightPopup{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    background-color: lightgrey;
+    border: 2px solid black;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 2px 2px;
+}
+.addWeightPopup > *{
+    float: none;
+}
+#weightNum{
+    width: 60%;
+}
+#addWeightEnter, #addWeightCancel{
+    margin-top: 5px;
+}
+
+
+
+
+
+
+/*
 .workout{
     padding: 50px 0px 150px 0px;
 }
@@ -103,11 +177,10 @@ footer{
     height: 150px;
     width: 250px;
     border-radius: 20px;
-    /*font-size: 60px;*/
+    font-size: 60px;
     border: 2px solid black;
     font-size: 25px;
 }
-
 .footerGrid{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -116,7 +189,8 @@ footer{
 #footerButton{
     background-color: grey;
     border: 5px solid black;
-    /*width: 100%;
-    height: 100%;*/
+    width: 100%;
+    height: 100%;
     font-size: 25px;
 }
+*/

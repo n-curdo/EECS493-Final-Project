@@ -5,32 +5,42 @@
         <meta charset="utf-8">
         <link rel="stylesheet" href="homeStyle.css">
         <!-- ADD LINK TO SCRIPT WHEN NECESSARY -->
+        <script src='scripts/jquery.min.js'></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+        
     </head>
 
     <body>
         <header>
             <!--<button id="dropDownMenu" type="button"></button>-->
             <div class="userInfo">
-                <img id="profilePicture" src="images/blankPFP.png" alt="Profile Picture"> <!-- Possibly have profile functionality?-->
-                <p id="username">Sign In</p>
+                <img id="profilePicture" src="images/blankPFP.png" onClick="location.href='signUp.html'" alt="Profile Picture" tabindex="0"> <!-- Possibly have profile functionality?-->
+                <p id="username" onClick="location.href='signUp.html'" tabindex="0">Sign In</p>
             </div>
             <button id="headerButton">Home</button>
-            <button id="headerButton">Workouts</button>
-            <button id="headerButton">Meals</button>
+            <button id="headerButton" onClick="location.href='exercise.html'">Workouts</button>
+            <button id="headerButton" onClick="location.href='dieting.html'">Meals</button>
         </header>
         
         <div class="content">
-            <div class="streak">
-                <p style="text-align: center;">You're On a <br> __ Day Streak! &#128293</p>
-                <div class="streakGrid">
-                    <button id="streakDay" style="background-color: orange"></button>
-                    <button id="streakDay" style="background-color: orange"></button>
-                    <button id="streakDay" style="background-color: orange"></button>
-                    <button id="streakDay"></button>
-                    <button id="streakDay"></button>
+            <div class="overallStreak">
+                <div class="calendar">
+                    This is where <br>the calendar will go
+                </div>
+                <div class="streak">
+                    <p>You're On a 13 Workout Streak! &#128293</p>
+                    <p>You've Completed 3 / 5 Workouts This Week!</p>
+                    <div class="streakGrid">
+                        <button id="streakDay" style="background-color: orange">M</button>
+                        <button id="streakDay" style="background-color: orange">T</button>
+                        <button id="streakDay" style="background-color: orange">W</button>
+                        <button id="streakDay">Th</button>
+                        <button id="streakDay">F</button>
+                    </div>
                 </div>
             </div>
-    
+            
+        <!-- OG Workout Stuff
             <div class="workout">
                 <p style="text-align: center;">Choose A Split: </p>
                 <div class="workoutGrid">
@@ -38,9 +48,55 @@
                     <button id="workoutItem">Back</button>
                     <button id="workoutItem">Bicep</button>
                 </div>
-    
             </div>
+        -->
+            
+            <div class="statistics">
+                <div class="weight">
+                    <div id="weightChartTitle">   
+                        <p>Weight (lbs.):</p> 
+                        <button id="addWeightButton">Add Weight</button>
+                        <div class="addWeightPopup">
+                            <label for="weightNum">Enter Weight:</label><br>
+                            <input type="number" id="weightNum" name="weightNum"><br>
+                            <button id="addWeightEnter">Enter</button>
+                            <button id="addWeightCancel">Cancel</button>
+                            <button id="addWeightUndo">Undo</button>
+                        </div>
+                    </div>
+                    <div class="chart-container" style="position: relative; width: 85%;">
+                        <canvas id="weightChart" style="width:100%"></canvas>
+                    </div>
+                </div>
+                <div class="maxes">
+                    <div id="maxSelection">
+                        <p>Select Your Maxes to View: </p>
+                        <button id="benchButton">BENCH</button>
+                        <button id="squatButton">SQUAT</button>
+                        <button id="deadliftButton">DEADLIFT</button>
+                    </div>
+                    <div id="benchMax">
+                        Bench Maxes (lbs.)
+                        <div class="chart-container" style="position: relative; width: 85%;">
+                            <canvas id="benchChart" style="width:100%;"></canvas>
+                        </div>
+                    </div>
+                    <div id="squatMax">
+                        Squat Maxes (lbs.)
+                        <div class="chart-container" style="position: relative; width: 85%;">
+                            <canvas id="squatChart"></canvas>
+                        </div>  
+                    </div>
+                    <div id="deadliftMax">
+                        Deadlift Maxes (lbs.)
+                        <div class="chart-container" style="position: relative; width: 85%;">
+                            <canvas id="deadliftChart"></canvas>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+        
         </div>
     <!--
         <footer class="footerGrid">
@@ -49,6 +105,7 @@
                 <button id="footerButton">Meals</button>
         </footer>
     -->
+    <script src="scripts/homeJS.js"></script>
     </body>
 
 
