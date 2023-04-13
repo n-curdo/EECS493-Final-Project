@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Exercise Page</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="exercise.css">
+        <script src='scripts/jquery.min.js'></script>
+        <script src="scripts/exercise.js" defer></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="userInfo">
+                <img id="profilePicture" src="images/blankPFP.png" onClick="location.href='signUp.html'" alt="Profile Picture" tabindex="0">
+                <p id="username" onClick="location.href='signUp.html'" tabindex="0">Sign In</p>
+            </div>
+            <button id="headerButton" onClick="location.href='index.html'">Home</button>
+            <button id="headerButton">Exercises</button>
+            <button id="headerButton" onClick="location.href='dieting.html'">Meals</button>
+        </header>
+
+        <div class="content">
+            <h2>Exercise history</h2>
+            <table id="recentExercises">
+                <tr>
+                    <th>Exercise</th>
+                    <th>Date</th>
+                    <th>Weight (lbs)</th>
+                    <th>Reps</th>
+                </tr>
+            </table>
+
+            <h2>Select an exercise</h2>
+            <select id="exerciseSelection">
+                <option value="">--Choose an exercise--</option>
+            </select>
+
+            <h2>Exercise history for selected exercise</h2>
+            <table id="selectedExerciseHistory">
+                <tr>
+                    <th>Date</th>
+                    <th>Weight (lbs)</th>
+                    <th>Reps</th>
+                </tr>
+            </table>
+
+            <button class="commonButton" id="addExerciseButton">Add Exercise</button>
+        </div>
+
+        <div id="addExerciseForm" style="display:none;">
+            <h2>Add Exercise</h2>
+            <form>
+                <label for="exerciseName">Exercise name:</label>
+                <input type="text" id="exerciseName" name="exerciseName" required>
+                <label for="weight">Weight (lbs):</label>
+                <input type="number" id="weight" name="weight" required>
+                <label for="reps">Reps:</label>
+                <input type="number" id="reps" name="reps" required>
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+                <button class="commonButton" id="submitExercise" type="submit">Submit Exercise</button>
+            </form>
+            <button class="commonButton" id="goBackButton">Go back</button>
+        </div>
+        
+    </body>
+</html>

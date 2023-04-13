@@ -7,7 +7,8 @@
         <!-- ADD LINK TO SCRIPT WHEN NECESSARY -->
         <script src='scripts/jquery.min.js'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-        
+        <script src="scripts/exercise.js" defer></script>
+
     </head>
 
     <body>
@@ -18,10 +19,10 @@
                 <p id="username" onClick="location.href='signUp.html'" tabindex="0">Sign In</p>
             </div>
             <button id="headerButton">Home</button>
-            <button id="headerButton" onClick="location.href='exercise.html'">Workouts</button>
+            <button id="headerButton" onClick="location.href='exercise.html'">Exercises</button>
             <button id="headerButton" onClick="location.href='dieting.html'">Meals</button>
         </header>
-        
+
         <div class="content">
             <div class="overallStreak">
                 <div class="calendar">
@@ -39,7 +40,7 @@
                     </div>
                 </div>
             </div>
-            
+
         <!-- OG Workout Stuff
             <div class="workout">
                 <p style="text-align: center;">Choose A Split: </p>
@@ -50,11 +51,11 @@
                 </div>
             </div>
         -->
-            
+
             <div class="statistics">
                 <div class="weight">
-                    <div id="weightChartTitle">   
-                        <p>Weight (lbs.):</p> 
+                    <div id="weightChartTitle">
+                        <p>Weight (lbs.):</p>
                         <button id="addWeightButton">Add Weight</button>
                         <div class="addWeightPopup">
                             <label for="weightNum">Enter Weight:</label><br>
@@ -85,7 +86,7 @@
                         Squat Maxes (lbs.)
                         <div class="chart-container" style="position: relative; width: 85%;">
                             <canvas id="squatChart"></canvas>
-                        </div>  
+                        </div>
                     </div>
                     <div id="deadliftMax">
                         Deadlift Maxes (lbs.)
@@ -96,7 +97,7 @@
                 </div>
 
             </div>
-        
+
         </div>
     <!--
         <footer class="footerGrid">

@@ -1,0 +1,154 @@
+body {
+    background-color: #181818;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    height: 20%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.userInfo {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+    align-items: center;
+    padding-right: 40px;
+}
+
+#headerButton{
+    height: 50%;
+    font-size: 40px;
+    background-color: rgb(191, 191, 191);
+    margin-left: 10px;
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+#headerButton:hover, #headerButton:focus{
+    font-weight: bold;
+    background-color: white;
+}
+
+#profilePicture {
+    height: 75%;
+    background-color: rgb(191, 191, 191);
+    border-radius: 75px;
+    aspect-ratio: 1/1;
+}
+
+#profilePicture:hover, #profilePicture:focus {
+    height: 80%;
+}
+
+#username {
+    font-size: 40px;
+    padding-left: 20px;
+    text-align: center;
+    color: white;
+}
+
+#username:hover, #username:focus {
+    font-weight: bold;
+}
+
+.content {
+    padding: 20px;
+    color: white;
+}
+
+h2, h3 {
+    margin-bottom: 10px;
+}
+
+#workoutSelector {
+    font-size: 18px;
+    padding: 5px;
+    background-color: rgb(191, 191, 191);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#loadWorkoutButton {
+    margin-left: 10px;
+    font-size: 18px;
+    padding: 5px 10px;
+    background-color: rgb(191, 191, 191);
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#loadWorkoutButton:hover, #loadWorkoutButton:focus {
+    font-weight: bold;
+    background-color: white;
+}
+
+.workoutInfo {
+    margin-top: 20px;
+}
+
+#exerciseHistory {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+#exerciseHistory th, #exerciseHistory td {
+    border: 1px solid white;
+    padding: 5px;
+    text-align: center;
+}
+
+#exerciseName, #weight, #reps {
+    font-size: 18px;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: rgb(191, 191, 191);
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#addExerciseButton {
+    font-size: 18px;
+    padding: 5px 10px;
+    background-color: rgb(191, 191, 191);
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#addExerciseButton:hover, #addExerciseButton:focus {
+    font-weight: bold;
+    background-color: white;
+}
+
+button.commonButton {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #555555;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 10px 0;
+    transition: background-color 0.3s;
+}
+
+button.commonButton:hover {
+    background-color: #888888;
+}
+
+#addExerciseForm {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#addExerciseForm input[type="text"],
+#addExerciseForm input[type="number"],
+#addExerciseForm input[type="date"] {
+    background-color: white;
+    border: 1px solid #cccccc;
+    padding: 5px;
+    margin: 5px 0;
+}
